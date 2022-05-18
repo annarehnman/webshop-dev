@@ -1,12 +1,14 @@
 import React from 'react'
+import Signup from '../components/Login'
+import ProductList from '../components/ProductList'
 
 export default function HomePage({ products }) {
   return (
     <div>
       <h1>HomePage</h1>
-      {products.map(p => (
-        <div key={p}>{p}</div>
-      ))}
+      <Signup />
+      <br/>
+      <ProductList products={products} />
     </div>
   )
 }
