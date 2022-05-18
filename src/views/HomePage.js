@@ -4,8 +4,8 @@ import ProductList from '../components/ProductList'
 
 export default function HomePage({ products }) {
   return (
-    <div>
-      <h1>HomePage</h1>
+    <div className='bg-white p-10'>
+      <h1 className='font-bold text-3xl mb-5'>HomePage</h1>
       <Signup />
       <br/>
       <ProductList products={products} />
