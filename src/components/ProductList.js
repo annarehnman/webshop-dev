@@ -6,7 +6,7 @@ export default function ProductList() {
   const products = useSelector((state) => state.productList.products)
 
   return (
-    <div className='bg-white w-full'>
+    <div className= 'w-full'>
       <h2 className='font-bold text-xl mb-2'>Produkter</h2>
       <ul className='flex flex-wrap -mr-3'>
         {products.map(p => (
