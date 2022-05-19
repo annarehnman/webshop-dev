@@ -6,16 +6,18 @@ export default function ProductList() {
   const products = useSelector((state) => state.productList.products)
 
   return (
-    <div>
-      <h2 className='font-bold text-2xl mb-1'>Produkter</h2>
-      <div className='flex flex-wrap justify-center'>
+    <div className='bg-white w-full'>
+      <h2 className='font-bold text-xl mb-2'>Produkter</h2>
+      <ul className='flex flex-wrap -mr-3'>
         {products.map(p => (
-          <div className='border border-gray-500 p-3' key={p}>
-            <h3 className='font-bold mb-1'>{p}</h3>
-            <p>produktinfo</p>
-          </div>
+          <li className='w-1/3 pr-3 pb-3' key={p}>
+            <div className='border border-gray-500 p-3'>
+              <h3 className='font-bold mb-1'>{p}</h3>
+              <p>produktinfo</p>
+            </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   )
 }
