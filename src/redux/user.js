@@ -1,17 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { auth } from '../firebase'
 
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    isUser: false,
+    currentUser: null,
     isAdmin: false
   },
   reducers: {
+    signup(email, password) {
+      return auth.createUserWithEmailAndPassword(email, password)
+    },
+    // login(email, password) {
+    // },
     toggleAdmin(state) {
       state.isAdmin = !state.isAdmin
-    },
-    toggleUser(state) {
-      state.isUser = !state.isUser
     },
   },
 })
