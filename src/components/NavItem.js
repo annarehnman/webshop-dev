@@ -1,7 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-export default function NavItem() {
+export default function NavItem(link) {
+
+  const link = props.link
+
   return (
     <li className='pb-3'>
       <NavLink 
