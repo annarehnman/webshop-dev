@@ -1,7 +1,8 @@
 import React from 'react'
-import HomePage from './views/HomePage'
-import AdminPage from './views/AdminPage'
 import NavBar from './components/NavBar'
+import Home from './views/Home'
+import Admin from './views/Admin'
+import NotFound from './views/NotFound'
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
 
 export default function App() {
@@ -12,8 +13,9 @@ export default function App() {
         <div className='container py-10'>
           <NavBar />  
           <Routes>      
-            <Route path="/" exact element={<HomePage />} />
-            <Route path="/admin" element={<AdminPage />} />
+            <Route path="/" exact element={<Home />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </div>
       </div>
