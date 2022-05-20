@@ -1,16 +1,15 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { toggleAdmin } from '../redux/user'
+import { login } from '../../store/reducers/auth'
 
-const AdminContent = () => {
+const Dashboard = () => {
 
   const dispatch = useDispatch()
 
   return (
     <div>
-      <h2 className='mb-3'>Hej Admin!</h2>
       <button 
-        onClick={() => dispatch(toggleAdmin())} 
+        onClick={() => dispatch(login())} 
         className='block w-1/5 border border-black bg-black text-white text-sm p-2' 
         type='submit'
       >
@@ -20,4 +19,4 @@ const AdminContent = () => {
   )
 }
 
-export default AdminContent
+export default Dashboard

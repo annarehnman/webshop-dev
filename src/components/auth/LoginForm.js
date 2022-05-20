@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux'
-import { toggleAdmin } from '../redux/user'
+import { login } from '../../store/reducers/auth'
 
 const LoginForm = () => {
 
@@ -13,7 +13,7 @@ const LoginForm = () => {
     <div>
       <form className='w-full' action=''>
         <input 
-          className='block w-2/3 mb-3' 
+          className='block w-2/3 mb-3'
           type='email' 
           placeholder='E-post' 
           id='email' 
@@ -21,7 +21,7 @@ const LoginForm = () => {
           required 
         />
         <input 
-          className='block w-2/3  mb-3' 
+          className='block w-2/3  mb-3'
           type='password' 
           placeholder='Lösenord' 
           id='password' 
@@ -29,8 +29,8 @@ const LoginForm = () => {
           required 
         />
         <button 
-          onClick={() => dispatch(toggleAdmin())} 
           className='block w-1/5 border border-black bg-black text-white text-sm p-2' 
+          onClick={() => dispatch(login())}
           type='submit'
         >
           LOGGA IN
