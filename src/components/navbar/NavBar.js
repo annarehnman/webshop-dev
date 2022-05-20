@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import NavItem from './NavItem'
 
-export default function NavBar() {
+const NavBar = () => {
 
   const isAdmin = useSelector((state) => state.user.isAdmin)
 
@@ -17,3 +17,5 @@ export default function NavBar() {
     </nav>
   )
 }
+
+export default NavBar

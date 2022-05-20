@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { toggleAdmin } from '../redux/user'
 
-export default function Login() {
+const LoginForm = () => {
 
   const dispatch = useDispatch()
   
@@ -39,3 +39,5 @@ export default function Login() {
     </div>
   )
 }
+
+export default LoginForm

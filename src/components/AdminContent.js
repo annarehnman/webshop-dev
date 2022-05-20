@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { toggleAdmin } from '../redux/user'
 
-export default function AdminContent() {
+const AdminContent = () => {
 
   const dispatch = useDispatch()
 
@@ -19,3 +19,5 @@ export default function AdminContent() {
     </div>
   )
 }
+
+export default AdminContent

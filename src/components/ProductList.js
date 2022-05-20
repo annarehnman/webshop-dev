@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 
-export default function ProductList() {
+const ProductList = () => {
 
   const products = useSelector((state) => state.productList.products)
 
@@ -21,3 +21,5 @@ export default function ProductList() {
     </div>
   )
 }
+
+export default ProductList
