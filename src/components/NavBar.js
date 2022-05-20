@@ -8,14 +8,16 @@ export default function NavBar() {
         <li className='pb-3'>
           <NavLink 
             className={({isActive}) => (isActive ? "bg-white p-3 border-b border-white" : 'bg-white p-3 hover:border-b hover:border-white')} 
-            to="/">
-              Home
-            </NavLink>
+            to="/"
+          >
+            Home
+          </NavLink>
         </li>
         <li className='pb-3'>
           <NavLink 
-          className={({isActive}) => (isActive ? "bg-white p-3 border-b border-white" : 'bg-white p-3 hover:border-b hover:border-white')} 
-          to="/admin">
+            className={({isActive}) => (isActive ? "bg-white p-3 border-b border-white" : 'bg-white p-3 hover:border-b hover:border-white')} 
+            to="/admin"
+          >
             Admin
           </NavLink>
         </li>
