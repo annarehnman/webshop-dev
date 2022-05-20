@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from './components/NavBar'
+import NavBar from './components/navbar/NavBar'
 import Home from './views/Home'
 import Order from './views/Order'
 import Admin from './views/Admin'
