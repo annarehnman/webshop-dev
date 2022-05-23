@@ -7,12 +7,24 @@ import Order from './pages/Order'
 import Admin from './pages/Admin'
 import NotFound from './pages/NotFound'
 import ProductDetails from './pages/ProductDetails'
-// import { useDispatch } from 'react-redux'
-// import { setUser } from './store/reducers/user'
+import { useDispatch } from 'react-redux'
+import { setLoading, setUser } from './store/reducers/user'
+import { auth } from './services/firebase'
 
 export default function App() {
-  // const dispatch = useDispatch()
-  // dispatch(setUser(storedUser))
+  const dispatch = useDispatch()
+
+  const checkUser = () => {
+    dispatch(setLoading(true))
+    auth.onAuthStateChanged(user => {
+      if(user) {
+        dispatch(setUser(user.email))
+      }
+    })
+    dispatch(setLoading(false))
+  }
+
+  checkUser()
 
   return (
     <div className='bg-amber-100'>

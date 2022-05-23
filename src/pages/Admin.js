@@ -5,7 +5,6 @@ import Login from '../components/auth/Login'
 
 
 export default function Admin() {
-
   const isAdmin = useSelector((state) => state.user.isAdmin)
 
   return (

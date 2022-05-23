@@ -3,7 +3,6 @@ import NavItem from './NavItem'
 import NavAuth from './NavAuth'
 
 const NavBar = () => {
-
   const home = {
     name: "Home",
     path: "/"

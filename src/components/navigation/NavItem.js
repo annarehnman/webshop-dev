@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const NavItem = props => {
-
   const linkName = props.linkItem.name
   const linkPath = props.linkItem.path
 
