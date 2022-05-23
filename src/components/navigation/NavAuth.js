@@ -3,8 +3,7 @@ import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
 const NavAuth = () => {
-
-  const isAdmin = useSelector((state) => state.auth.isAdmin)
+  const isAdmin = useSelector((state) => state.user.isAdmin)
 
   const order = {
     name: "Order",

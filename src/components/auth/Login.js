@@ -1,10 +1,11 @@
 import React, { useRef } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { auth } from '../../services/firebase'
-import { setLoading, login } from '../../store/reducers/auth'
+import { setLoading, login } from '../../store/reducers/user'
 
 const Login = () => {
   const dispatch = useDispatch()
+  const isLoading = useSelector((state) => state.user.isLoading)
   const emailRef = useRef()
   const passwordRef = useRef()
 
@@ -46,6 +47,7 @@ const Login = () => {
         <button 
           className='block w-1/5 border border-black bg-black text-white text-sm mb-5 p-2' 
           type='submit'
+          disabled={isLoading}
         >
           LOGGA IN
         </button>

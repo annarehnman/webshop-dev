@@ -8,7 +8,7 @@ import Admin from './pages/Admin'
 import NotFound from './pages/NotFound'
 import ProductDetails from './pages/ProductDetails'
 // import { useDispatch } from 'react-redux'
-// import { setUser } from './store/reducers/auth'
+// import { setUser } from './store/reducers/user'
 
 export default function App() {
   // const dispatch = useDispatch()
@@ -20,8 +20,8 @@ export default function App() {
         <NavBar />  
         <Routes>      
           <Route path="/" exact element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/product:id" element={<ProductDetails />} />
+          <Route path="/products" exact element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/order" element={<Order />} />
           <Route path="/admin" element={<Admin />} />
           <Route path='*' element={<NotFound />} />

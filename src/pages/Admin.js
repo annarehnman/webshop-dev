@@ -6,7 +6,7 @@ import Login from '../components/auth/Login'
 
 export default function Admin() {
 
-  const isAdmin = useSelector((state) => state.auth.isAdmin)
+  const isAdmin = useSelector((state) => state.user.isAdmin)
 
   return (
     <div className='bg-white p-10'>
