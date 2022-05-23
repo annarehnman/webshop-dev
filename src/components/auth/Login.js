@@ -1,0 +1,56 @@
+import React, { useRef } from 'react'
+import { useDispatch } from 'react-redux'
+import { auth } from '../../services/firebase'
+import { setLoading, login } from '../../store/reducers/auth'
+
+const Login = () => {
+  const dispatch = useDispatch()
+  const emailRef = useRef()
+  const passwordRef = useRef()
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    dispatch(setLoading(true))
+    auth.signInWithEmailAndPassword(emailRef.current.value, passwordRef.current.value)
+    .then((userCredential) => {
+      const loggedInUser = userCredential.user.email
+      dispatch(login(loggedInUser))
+      dispatch(setLoading(false))
+    })
+    .catch((error) => {
+      console.log(error)
+      dispatch(setLoading(false))
+    })
+  }
+
+  return (
+    <form
+      onSubmit={handleSubmit}
+      className='w-full'>
+        <input 
+          className='block w-2/3 mb-3'
+          type='email' 
+          placeholder='E-post' 
+          id='email' 
+          ref={emailRef} 
+          required 
+        />
+        <input
+          className='block w-2/3 mb-5'
+          type='password' 
+          placeholder='Lösenord' 
+          id='password' 
+          ref={passwordRef} 
+          required 
+        />
+        <button 
+          className='block w-1/5 border border-black bg-black text-white text-sm mb-5 p-2' 
+          type='submit'
+        >
+          LOGGA IN
+        </button>
+    </form>
+  )
+}
+
+export default Login

@@ -1,28 +1,32 @@
-import React from 'react'
-import NavBar from './components/navbar/NavBar'
-import HomePage from './views/HomePage'
-import ProductsPage from './views/ProductsPage'
-import OrderPage from './views/OrderPage'
-import AdminPage from './views/AdminPage'
-import NotFoundPage from './views/NotFoundPage'
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
+
+import { Routes, Route } from 'react-router-dom'
+import NavBar from './components/navigation/NavBar'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import Order from './pages/Order'
+import Admin from './pages/Admin'
+import NotFound from './pages/NotFound'
+import ProductDetails from './pages/ProductDetails'
+// import { useDispatch } from 'react-redux'
+// import { setUser } from './store/reducers/auth'
 
 export default function App() {
+  // const dispatch = useDispatch()
+  // dispatch(setUser(storedUser))
 
   return (
-    <Router>
-      <div className='bg-amber-100'>
-        <div className='container py-10'>
-          <NavBar />  
-          <Routes>      
-            <Route path="/" exact element={<HomePage />} />
-            <Route path="/products" element={<ProductsPage />} />
-            <Route path="/order" element={<OrderPage />} />
-            <Route path="/admin" element={<AdminPage />} />
-            <Route path='*' element={<NotFoundPage />} />
-          </Routes>
-        </div>
+    <div className='bg-amber-100'>
+      <div className='container py-10'>
+        <NavBar />  
+        <Routes>      
+          <Route path="/" exact element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/product:id" element={<ProductDetails />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
       </div>
-    </Router>
+    </div>
   )
 }

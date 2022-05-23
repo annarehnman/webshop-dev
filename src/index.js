@@ -3,15 +3,18 @@ import ReactDOM from "react-dom/client"
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import App from './App'
 import { Provider } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
 import store from './store/store'
-import "./styles/tailwind.css"
+import "./assets/styles/tailwind.css"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
 root.render(
   <React.StrictMode>
     <Provider store= {store}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </Provider>
   </React.StrictMode>
 )
