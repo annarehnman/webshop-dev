@@ -8,7 +8,7 @@ const Contact = () => {
       <div className='w-2/3 pr-20 mb-10'>
         <h1 className='font-bold text-5xl font-serif mb-10'>Vi på gården</h1>
         <div className='mb-3 space-y-3'>
-          <p>Vi är oftast i trakten och du är vaölkommen att besöka oss, se till att ringa i förväg bara.</p>
+          <p>Vi är oftast i trakten och du är välkommen att besöka oss, se till att ringa i förväg bara.</p>
           <div>
             <p className='font-bold'>Mats Rehnman</p>
             <p>070-928 27 60</p>

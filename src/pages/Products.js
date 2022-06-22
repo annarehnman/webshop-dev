@@ -11,7 +11,7 @@ export default function Products() {
           <h1>direkt från gård</h1>
         </div>
         <div className='space-y-3'>
-          <p>Här kan du beställa vårt fina grönbeteskött och färska ägg, så väl som produkter från ett antal andra lokala gårdar. Vi levererar inom Strängnäs- och Stockholmsområdet. Det går också fint att hämta på plats, se till att du hör av dig i förväg bara.</p>
+          <p>Här kan du beställa vårt fina grönbeteskött och färska ägg, så väl som produkter från ett antal andra lokala gårdar. Vi levererar inom Strängnäs- och Stockholmsområdet, det går också fint att hämta på plats.</p>
         </div>
       </div>
       <div className='space-y-8'>
