@@ -1,14 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBasketShopping } from '@fortawesome/free-solid-svg-icons';
 
 const NavAuth = () => {
   const isAdmin = useSelector((state) => state.user.isAdmin)
-
-  const order = {
-    name: "Order",
-    path: "/order"
-  }
+  
   const admin = {
     name: "Admin",
     path: "/admin"
@@ -19,18 +17,16 @@ const NavAuth = () => {
       {isAdmin
       ?
       <NavLink 
-        className={({isActive}) => (isActive ? "bg-white p-3 border-b border-white" : 'bg-white p-3 hover:border-b hover:border-white')}
+        className={({isActive}) => (isActive ? "border-b border-white pb-1" : 'hover:border-b hover:border-black pb-1')}
         to={admin.path}
       >
         <span>{admin.name}</span>
       </NavLink>
       :
-      <NavLink 
-        className={({isActive}) => (isActive ? "bg-white p-3 border-b border-white" : 'bg-white p-3 hover:border-b hover:border-white')}
-        to={order.path}
-      >
-        <span>{order.name}</span>
-      </NavLink>
+      
+      <div className=' cursor-pointer'>
+        <FontAwesomeIcon icon={faBasketShopping} />
+      </div>
       }
     </li>
   )

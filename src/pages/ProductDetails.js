@@ -6,7 +6,7 @@ export default function ProductDetails() {
   console.log(id)
 
   return (
-    <div className='bg-white p-10'>
+    <div className='p-10'>
       <h1 className='font-bold text-3xl mb-5'>ProductDetails</h1>
     </div>
   )

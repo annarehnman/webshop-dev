@@ -7,7 +7,7 @@ const ProductList = () => {
 
   return (
     <div className= 'w-full'>
-      <h2 className='font-bold text-xl mb-2'>Produkter</h2>
+      <h2 className='font-bold font-serif text-xl mb-2'>Kategori</h2>
       <ul className='flex flex-wrap -mr-3'>
         {products.map(p => (
           <li className='w-1/3 pr-3 pb-3' key={p.id}>

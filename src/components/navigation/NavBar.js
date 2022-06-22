@@ -4,19 +4,24 @@ import NavAuth from './NavAuth'
 
 const NavBar = () => {
   const home = {
-    name: "Home",
+    name: "Hem",
     path: "/"
   }
   const products = {
-    name: "Products",
+    name: "Butiken",
     path: "/products"
+  }
+  const contact = {
+    name: "Hitta oss",
+    path: "/contact"
   }
 
   return (
-    <nav className='flex justify-between mx-10'>
-      <ul className='flex space-x-5'>
+    <nav className='flex justify-between mx-10 uppercase mb-16'>
+      <ul className='flex space-x-8'>
         <NavItem linkItem={home} />
         <NavItem linkItem={products} />
+        <NavItem linkItem={contact} />
       </ul>
       <ul className='flex space-x-5'>
         <NavAuth />
