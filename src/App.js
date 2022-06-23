@@ -1,4 +1,3 @@
-
 import { Routes, Route } from 'react-router-dom'
 import Header from './components/header/Header'
 import NavBar from './components/navigation/NavBar'
@@ -10,11 +9,14 @@ import Admin from './pages/Admin'
 import NotFound from './pages/NotFound'
 import ProductDetails from './pages/ProductDetails'
 import { useDispatch } from 'react-redux'
+// import { setBackground } from './store/reducers/background'
 import { setLoading, setUser } from './store/reducers/user'
 import { auth } from './services/firebase'
 
 export default function App() {
   const dispatch = useDispatch()
+
+  // const onHome = useSelector((state) => state.background.onHome)
 
   const checkUser = () => {
     dispatch(setLoading(true))
@@ -26,15 +28,24 @@ export default function App() {
     dispatch(setLoading(false))
   }
 
+  // const checkBackground = () => {
+  //   if(window.location.pathname === "/") {
+  //     dispatch(setBackground(true))
+  //   } else {
+  //     dispatch(setBackground(false))
+  //   }
+  // }
+
   checkUser()
+  // checkBackground()
 
   return (
-    <div className='bg-kblightbeige font-kbnearblack min-h-screen'>
+    <div className= 'bg-kblightbeige font-kbnearblack min-h-screen'>
       <div className='container pt-10'>
         <Header />
         <NavBar />
         <div className='min-h-full py-20'>
-          <Routes>      
+          <Routes >      
             <Route path="/" exact element={<Home />} />
             <Route path="/products" exact element={<Products />} />
             <Route path="/products/:id" element={<ProductDetails />} />

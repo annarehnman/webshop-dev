@@ -13,7 +13,7 @@ const NavAuth = () => {
   }
 
   return (
-    <li className=''>
+    <li>
       {isAdmin
       ?
       <NavLink 

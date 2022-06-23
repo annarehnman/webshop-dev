@@ -19,9 +19,9 @@ const ProductList = () => {
               <div className='w-full mx-1 mb-1.5 border-kblightgray border-b border-dashed'></div>
               <div className='text-sm leading-none space-x-2 mb-1.5'>
                 <Link to={`/products/${p.id}`} product={p.id} >
-                  <button className='h-full bg-kblightgray hover:bg-kbdarkgray text-white px-5 ml-1'>MER INFO</button>
+                  <button className='h-full bg-kblightgray hover:bg-kbdarkgray text-white w-20 text-center ml-1'>INFO</button>
                 </Link>
-                <button className='h-full bg-kblightgray hover:bg-kbdarkgray text-white px-5'>BESTÄLL</button>
+                <button className='h-full bg-kblightgray hover:bg-kbdarkgray text-white w-20 text-center'>BESTÄLL</button>
               </div>
             </div>
           </li>
