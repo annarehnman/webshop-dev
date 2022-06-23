@@ -9,7 +9,7 @@ export default function Admin() {
   return (
     <div className='p-10'>
       <div className='w-2/3 pr-20 mb-14'>
-        <h1 className='font-bold text-5xl font-serif mb-10 space-y-2'>Välkommen</h1>
+        <h1 className='mb-10'>Välkommen</h1>
         {isAdmin ? <Dashboard /> : <Login />}
       </div>
     </div>

@@ -45,7 +45,7 @@ const Login = () => {
           required 
         />
         <button 
-          className='block w-1/5 border border-black bg-black text-white text-sm mb-5 p-2' 
+          className='bg-kblightgray hover:bg-kbdarkgray text-white text-sm py-3 px-8' 
           type='submit'
           disabled={isLoading}
         >

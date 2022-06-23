@@ -41,6 +41,15 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+
+      kblightbeige: '#f3ece3',
+      kbdarkbeige: '#ece0d1',
+      kblightgray: '#46433e',
+      kbdarkgray: '#2f2c29',
+      kbnearblack: '#171614',
+      kbpaleblue: '#98abb6',
+      kbdarkblue: '#8798a2',
+      kbbrightblue: '#768a8a',
     }),
     columns: {
       auto: 'auto',

@@ -2,4 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply font-serif font-bold text-5xl;
+  }
+  h2 {
+    @apply font-serif font-bold text-xl mb-0.5;
+  }
+  h3 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .big-h1 {
+    @apply text-6xl;
+  }
+  .link {
+    padding-bottom: 1px;
+    border-bottom: 1px solid;
+  }
+  .link:hover {
+    @apply text-kblightgray;
+  }
+}
+
 * { box-sizing: border-box; }

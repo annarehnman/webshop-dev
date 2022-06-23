@@ -17,13 +17,13 @@ const NavBar = () => {
   }
 
   return (
-    <nav className='flex justify-between mx-10 uppercase mb-16'>
+    <nav className='flex justify-between uppercase'>
       <ul className='flex space-x-8'>
         <NavItem linkItem={home} />
         <NavItem linkItem={products} />
         <NavItem linkItem={contact} />
       </ul>
-      <ul className='flex space-x-5'>
+      <ul>
         <NavAuth />
       </ul>
     </nav>

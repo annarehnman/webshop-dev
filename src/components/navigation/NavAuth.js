@@ -13,18 +13,17 @@ const NavAuth = () => {
   }
 
   return (
-    <li className='pb-3'>
+    <li className=''>
       {isAdmin
       ?
       <NavLink 
-        className={({isActive}) => (isActive ? "border-b border-white pb-1" : 'hover:border-b hover:border-black pb-1')}
+        className={({isActive}) => (isActive ? 'border-b border-kbnearblack pb-1' : 'hover:border-b hover:border-kbnearblack pb-1')}
         to={admin.path}
       >
         <span>{admin.name}</span>
       </NavLink>
       :
-      
-      <div className=' cursor-pointer'>
+      <div className='cursor-pointer'>
         <FontAwesomeIcon icon={faBasketShopping} />
       </div>
       }

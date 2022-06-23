@@ -4,33 +4,40 @@ import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icon
 
 const Contact = () => {
   return (
-    <div className='p-10'>
-      <div className='w-2/3 pr-20 mb-10'>
-        <h1 className='font-bold text-5xl font-serif mb-10'>Vi på gården</h1>
-        <div className='mb-3 space-y-3'>
+    <div className='bg-white rounded-lg p-14'>
+      <div className='w-2/3'>
+        <div className='mb-6'>
+          <h1 className='mb-6'>Vi på gården</h1>
           <p>Vi är oftast i trakten och du är välkommen att besöka oss, se till att ringa i förväg bara.</p>
+        </div>
+        <div className='space-y-4 mb-6'>
           <div>
-            <p className='font-bold'>Mats Rehnman</p>
-            <p>070-928 27 60</p>
+            <h3>Mats Rehnman</h3>
+            <a className='link' href="tel:+46709282760">070-928 27 60</a>
           </div>
           <div>
-            <p className='font-bold'>Caroline Parneus</p>
-            <p>073-581 07 36</p>
+            <h3>Caroline Parneus</h3>
+            <a className='link' href="tel:+46735810736">073-581 07 36</a>
           </div>
-          <p>info@kungsberg.com</p>
-          <div>
-            <p><FontAwesomeIcon icon={faFacebookSquare} className='mr-2' /> Facebook</p>
-            <p><FontAwesomeIcon icon={faInstagram} className='mr-2' /> Instagram</p>
-          </div>
-        </div>     
+          <p><a className='link' href = "mailto: info@kungsberg.com">info@kungsberg.com</a></p>
+        </div> 
+        
+        <div className='mb-6'>
+          <h2>Följ oss på sociala medier</h2>
+          <a className='block' href='https://www.facebook.com/ekologisktkott.narproduceratkott.kottlada'>
+            <FontAwesomeIcon icon={faFacebookSquare} className='mr-2' /><span className='link'>Kungsberg Gård på Facebook</span>
+          </a>
+          <a className='block' href='https://www.instagram.com/kungsberggard/'>
+            <FontAwesomeIcon icon={faInstagram} className='mr-2' /><span className='link'>Kungsberg Gård på Instagram</span>
+          </a>
+        </div>
+        <div className='mb-3'>
+          <h2>Hitta hit</h2>
+          <p>Kungsberg Gård, Kungsberg 1</p>
+          <p>645 92 Strängnäs</p>
+        </div>
       </div>
-      <div className='mb-5'>
-        <h2 className='font-bold text-xl font-serif'>Hitta hit</h2>
-        <p>Kungsberg Gård</p>
-        <p>Kungsberg 1</p>
-        <p>645 92 Strängnäs</p>
-      </div>
-      <div className='w-full bg-gray-300 h-72'>
+      <div className='w-full bg-gray-300 h-96'>
         karta
       </div>
     </div>

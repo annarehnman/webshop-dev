@@ -29,19 +29,21 @@ export default function App() {
   checkUser()
 
   return (
-    <div className=''>
-      <div className='container py-10'>
+    <div className='bg-kblightbeige font-kbnearblack min-h-screen'>
+      <div className='container pt-10'>
         <Header />
-        <NavBar />  
-        <Routes>      
-          <Route path="/" exact element={<Home />} />
-          <Route path="/products" exact element={<Products />} />
-          <Route path="/products/:id" element={<ProductDetails />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/admin" element={<Admin />} />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
+        <NavBar />
+        <div className='min-h-full py-20'>
+          <Routes>      
+            <Route path="/" exact element={<Home />} />
+            <Route path="/products" exact element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/order" element={<Order />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </div>  
       </div>
     </div>
   )

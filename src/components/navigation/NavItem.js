@@ -6,9 +6,9 @@ const NavItem = props => {
   const linkPath = props.linkItem.path
 
   return (
-    <li className='pb-3'>
+    <li>
       <NavLink 
-        className={({isActive}) => (isActive ? "border-b border-white pb-1" : 'hover:border-b hover:border-black pb-1')}
+        className={({isActive}) => (isActive ? 'border-b border-kbnearblack pb-1' : 'hover:border-b hover:border-kbnearblack pb-1')}
         to={linkPath}
       >
         <span>{linkName}</span>

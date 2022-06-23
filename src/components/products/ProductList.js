@@ -6,17 +6,24 @@ const ProductList = () => {
   const products = useSelector((state) => state.product.allProducts)
 
   return (
-    <div className= 'w-full'>
-      <h2 className='font-bold font-serif text-xl mb-2'>Kategori</h2>
-      <ul className='flex flex-wrap -mr-3'>
+    <div className= 'w-full mb-12 last:mb-0'>
+      <h2 className='font-bold font-serif text-2xl mb-3'>Kategori</h2>
+      <ul>
         {products.map(p => (
-          <li className='w-1/3 pr-3 pb-3' key={p.id}>
-            <Link to={`/products/${p.id}`} product={p.id} >
-              <div className='border border-gray-500 p-3'>
-                <h3 className='font-bold mb-1'>{p.name}</h3>
-                <p>produktinfo</p>
+          <li className='pb-1 mb-5 last:mb-0' key={p.id}>
+            <div className='flex justify-between whitespace-nowrap'>
+              <div>
+                <h3 className='font-bold'>{p.name}</h3>
+                <p className='mr-1'>Kort produktinfo</p>
               </div>
-            </Link>
+              <div className='w-full mx-1 mb-1.5 border-kblightgray border-b border-dashed'></div>
+              <div className='text-sm leading-none space-x-2 mb-1.5'>
+                <Link to={`/products/${p.id}`} product={p.id} >
+                  <button className='h-full bg-kblightgray hover:bg-kbdarkgray text-white px-5 ml-1'>MER INFO</button>
+                </Link>
+                <button className='h-full bg-kblightgray hover:bg-kbdarkgray text-white px-5'>BESTÄLL</button>
+              </div>
+            </div>
           </li>
         ))}
       </ul>
