@@ -12,10 +12,12 @@ const ProductList = () => {
         {products.map(p => (
           <li className='pb-1 mb-5 last:mb-0' key={p.id}>
             <div className='flex justify-between whitespace-nowrap'>
-              <div>
-                <h3 className='font-bold'>{p.name}</h3>
-                <p className='mr-1'>Kort produktinfo</p>
-              </div>
+              <Link to={`/products/${p.id}`} product={p.id} >
+                <div>
+                  <h3 className='font-bold'>{p.name}</h3>
+                  <p className='mr-1'>Kort produktinfo</p>
+                </div>
+              </Link>
               <div className='w-full mx-1 mb-1.5 border-kblightgray border-b border-dashed'></div>
               <div className='text-sm leading-none space-x-2 mb-1.5'>
                 <Link to={`/products/${p.id}`} product={p.id} >

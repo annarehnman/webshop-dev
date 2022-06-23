@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react' 
 import { NavLink } from 'react-router-dom'
-import image from '../assets/images/gard.jpg'
 
 export default function Home() {
 
   return (
-    <div className='flex'>
-      <div className='w-2/3 pr-20 space-y-10'>
+    <div className='flex w-2/3 bg-white p-14'>
+      <div className='space-y-10 mr-20'>
         <div className='space-y-2'>
           <h1 className='big-h1'>Välkommen</h1>
           <h1 className='big-h1'>till Kungsberg</h1>
@@ -19,9 +18,6 @@ export default function Home() {
         <button className='border border-kbnearblack py-3 px-8 hover:bg-kbdarkgray hover:text-white'>
           <NavLink to={"/products"} >TILL BUTIKEN</NavLink>
         </button>
-      </div>
-      <div className='w-1/3 align-top'>
-        <img className='object-contain' src={image} alt="gården" />
       </div>
     </div>
   )

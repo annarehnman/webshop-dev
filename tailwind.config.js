@@ -115,6 +115,9 @@ module.exports = {
       72: '18rem',
       80: '20rem',
       96: '24rem',
+      100: '25rem',
+      120: '30rem',
+      140: '35rem', 
     },
     animation: {
       none: 'none',
@@ -140,6 +143,7 @@ module.exports = {
     backgroundColor: ({ theme }) => theme('colors'),
     backgroundImage: {
       none: 'none',
+      'bgImage': "url('../images/gard.jpg')",
       'gradient-to-t': 'linear-gradient(to top, var(--tw-gradient-stops))',
       'gradient-to-tr': 'linear-gradient(to top right, var(--tw-gradient-stops))',
       'gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',

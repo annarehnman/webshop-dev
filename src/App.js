@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux'
 // import { setBackground } from './store/reducers/background'
 import { setLoading, setUser } from './store/reducers/user'
 import { auth } from './services/firebase'
+import image from './assets/images/gard.jpg'
 
 export default function App() {
   const dispatch = useDispatch()
@@ -40,22 +41,24 @@ export default function App() {
   // checkBackground()
 
   return (
-    <div className= 'bg-kblightbeige font-kbnearblack min-h-screen'>
-      <div className='container pt-10'>
-        <Header />
-        <NavBar />
-        <div className='min-h-full py-20'>
-          <Routes >      
-            <Route path="/" exact element={<Home />} />
-            <Route path="/products" exact element={<Products />} />
-            <Route path="/products/:id" element={<ProductDetails />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/order" element={<Order />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path='*' element={<NotFound />} />
-          </Routes>
-        </div>  
+    <div className= 'bg-bgImage bg-cover w-full h-full font-kbnearblack min-h-screen'>
+      <div className='text-white w-full py-10'>
+        <div className='container'>
+          {/* <Header /> */}
+          <NavBar />
+        </div>
       </div>
+      <div className='container min-h-full py-10'>
+        <Routes >      
+          <Route path="/" exact element={<Home />} />
+          <Route path="/products" exact element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/order" element={<Order />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </div>  
     </div>
   )
 }

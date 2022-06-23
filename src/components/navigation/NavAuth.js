@@ -13,7 +13,7 @@ const NavAuth = () => {
   }
 
   return (
-    <li>
+    <div>
       {isAdmin
       ?
       <NavLink 
@@ -27,7 +27,7 @@ const NavAuth = () => {
         <FontAwesomeIcon icon={faBasketShopping} />
       </div>
       }
-    </li>
+    </div>
   )
 }
 

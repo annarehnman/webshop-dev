@@ -4,7 +4,7 @@ import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icon
 
 const Contact = () => {
   return (
-    <div className='bg-white rounded-lg p-14'>
+    <div className='bg-white p-14'>
       <div className='w-2/3'>
         <div className='mb-6'>
           <h1 className='mb-6'>Vi på gården</h1>
