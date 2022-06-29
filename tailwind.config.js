@@ -378,7 +378,7 @@ module.exports = {
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
+        '"Noto Color Emoji"',       
       ],
       serif: ['ui-serif', 'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: [
@@ -391,6 +391,8 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      'shadows': ['"Shadows Into Light"', 'cursive'],
+      'opensans': ['"Open Sans"', 'cursive'],
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

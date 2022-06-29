@@ -4,9 +4,9 @@ import ProductList from '../components/products/ProductList'
 export default function Products() {
   
   return (
-    <div className='bg-white p-14'>
-      <div className='w-2/3 pr-20 mb-12'>
-        <div className='mb-6 space-y-2'>
+    <div className='bg-white md:rounded-lg p-8 md:p-14'>
+      <div className='md:w-2/3 md:pr-20 mb-8 md:mb-12'>
+        <div className='mb-8 space-y-2'>
           <h1>Kött och ägg</h1>
           <h1>direkt från gård</h1>
         </div>

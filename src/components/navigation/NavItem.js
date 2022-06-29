@@ -6,9 +6,9 @@ const NavItem = props => {
   const linkPath = props.linkItem.path
 
   return (
-    <li className='flex align-middle'>
+    <li className='flex font-shadows text-2xl'>
       <NavLink 
-        className={({isActive}) => (isActive ? 'align-middle border-b border-white py-1.5' : 'align-middle hover:border-b hover:border-white py-1.5')}
+        className={({isActive}) => (isActive ? 'border-b border-white py-1.5' : 'border-b border-transparent hover:border-b hover:border-white py-1.5')}
         to={linkPath}
       >
         {linkName}

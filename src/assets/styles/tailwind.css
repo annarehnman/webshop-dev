@@ -2,22 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+* { box-sizing: border-box; }
+
 @layer base {
   h1 {
-    @apply font-serif font-bold text-5xl;
+    @apply font-shadows text-5xl md:text-6xl;
   }
   h2 {
-    @apply font-serif font-bold text-xl mb-0.5;
+    @apply font-shadows text-3xl mb-0.5;
   }
   h3 {
     @apply font-bold;
   }
+  p, button, ul, a :not(ul, a) {
+    @apply font-opensans;
+  }
 }
 
 @layer components {
-  .big-h1 {
-    @apply text-6xl;
-  }
   .link {
     padding-bottom: 1px;
     border-bottom: 1px solid;
@@ -26,5 +28,3 @@
     @apply text-kblightgray;
   }
 }
-
-* { box-sizing: border-box; }
