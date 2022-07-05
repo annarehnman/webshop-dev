@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import Dashboard from '../components/admin/Dashboard'
-import Login from '../components/auth/Login'
+import Login from '../components/admin/Login'
 
 export default function Admin() {
   const isAdmin = useSelector((state) => state.user.isAdmin)

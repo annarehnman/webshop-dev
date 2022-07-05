@@ -1,5 +1,5 @@
 import React from 'react'
-import Logout from '../auth/Logout'
+import Logout from './Logout'
 
 const Dashboard = () => {
 
