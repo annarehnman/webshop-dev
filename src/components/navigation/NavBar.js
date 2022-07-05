@@ -11,27 +11,6 @@ const NavBar = () => {
   const isAdmin = useSelector((state) => state.user.isAdmin)
   const [showMenu, setShowMenu] = useState(false)
 
-  const home = {
-    name: 'Start',
-    path: '/'
-  }
-  const products = {
-    name: 'Butiken',
-    path: '/butiken'
-  }
-  const contact = {
-    name: 'Hitta oss',
-    path: '/hittaoss'
-  }
-  const order = {
-    name: 'Din beställning',
-    path: '/order'
-  }
-  const admin = {
-    name: 'Admin',
-    path: '/admin'
-  }
-
   const handleToggle = () => {
     setShowMenu(prev => !prev)
   }
@@ -55,23 +34,23 @@ const NavBar = () => {
       </div>
       <div className={showMenu ? 'flex flex-col items-start mt-5' : 'hidden'}>
         <ul className='flex md:hidden flex-col items-start space-y-5 mb-10'>
-          <NavItem linkItem={home} />
-          <NavItem linkItem={products} />
-          <NavItem linkItem={contact} />
+          <NavItem path={'/'} name={'Start'} />
+          <NavItem path={'/butiken'} name={'Butiken'} />
+          <NavItem path={'/hittaoss'} name={'Hitta oss'} />
         </ul>
         {isAdmin 
-          ? <NavItem linkItem={admin} /> 
-          : <NavItem linkItem={order} />
+          ? <NavItem path={'/admin'} name={'Admin'} /> 
+          : <NavItem path={'/bestallning'} name={'Beställning'} />
         }
       </div>
       {/* LARGE MENU */}
       <div className='hidden md:flex w-full justify-between'>
         <ul className="flex items-center">
-          <NavItem linkItem={products} />
-          <NavItem linkItem={contact} />
+          <NavItem path={'/butiken'} name={'Butiken'} />
+          <NavItem path={'/hittaoss'} name={'Hitta oss'} />
         </ul>
         {isAdmin 
-            ? <NavItem linkItem={admin} /> 
+            ? <NavItem path={'/admin'} name={'Admin'} />  
             : <div className='flex items-center text-xl'><FontAwesomeIcon icon={faBasketShopping} /></div>
         }
       </div>

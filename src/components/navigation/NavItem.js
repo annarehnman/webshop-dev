@@ -2,8 +2,8 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const NavItem = props => {
-  const linkName = props.linkItem.name
-  const linkPath = props.linkItem.path
+  const linkPath = props.path
+  const linkName = props.name
 
   return (
     <li className='flex justify-end md:justify-start font-shadows text-4xl md:text-2xl md:ml-8'>
