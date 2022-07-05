@@ -7,8 +7,8 @@ export default function Home() {
     <div className='flex md:w-2/3 bg-white md:rounded-lg p-8 md:p-14'>
       <div className='space-y-10 md:mr-20'>
         <div className='space-y-2'>
-          <h1 className='text-6xl md:text-7xl'>Välkommen</h1>
-          <h1 className='text-6xl md:text-7xl'>till Kungsberg</h1>
+          <h1 className='md:text-7xl'>Välkommen</h1>
+          <h1 className='md:text-7xl'>till Kungsberg</h1>
         </div>
         <div className='space-y-5'>
           <p>Vid Mälarens strand en dryg mil från Strängnäs ligger Kungsberg Gård, här bedriver vi sedan snart 20 år tillbaka ekologiskt lantbruk.</p>

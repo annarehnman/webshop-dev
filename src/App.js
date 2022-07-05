@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import Header from './components/Header'
+import NavBar from './components/navigation/NavBar'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import Contact from './pages/Contact'
@@ -27,12 +27,10 @@ export default function App() {
   checkUser()
 
   return (
-    <div className='relative font-kbnearblack'>
+    <div className='relative'>
       <div className='w-full min-h-screen bg-bgImage bg-cover'>
-        <div className='text-white w-full py-5 md:py-10'>
-          <Header />
-        </div>
-        <div className='container md:py-10'>
+        <NavBar />
+        <div className='container md:py-10 font-kbnearblack'>
           <Routes >      
             <Route path="/" exact element={<Home />} />
             <Route path="/butiken" exact element={<Products />} />
