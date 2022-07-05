@@ -13,17 +13,17 @@ const NavAuth = () => {
   }
 
   return (
-    <div>
+    <div className='flex items-center justify-end md:justify-start'>
       {isAdmin
       ?
       <NavLink 
-        className={({isActive}) => (isActive ? 'border-b border-kbnearblack pb-1 py-1.5' : 'hover:border-b hover:border-kbnearblack pb-1 py-1.5')}
+        className={({isActive}) => (isActive ? 'border-b border-kbnearblack py-1.5' : 'hover:border-b hover:border-kbnearblack py-1.5')}
         to={admin.path}
       >
         <span>{admin.name}</span>
       </NavLink>
       :
-      <div className=' text-xl cursor-pointer py-1.5'>
+      <div className='flex items-center text-xl cursor-pointer'>
         <FontAwesomeIcon icon={faBasketShopping} />
       </div>
       }

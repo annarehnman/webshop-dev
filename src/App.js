@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
-import NavBar from './components/navigation/NavBar'
+import Header from './components/Header'
 import Home from './pages/Home'
 import Products from './pages/Products'
 import Contact from './pages/Contact'
@@ -29,10 +29,8 @@ export default function App() {
   return (
     <div className='relative font-kbnearblack'>
       <div className='w-full min-h-screen bg-bgImage bg-cover'>
-        <div className='text-white w-full py-10'>
-          <div className='container'>
-            <NavBar />
-          </div>
+        <div className='text-white w-full py-5 md:py-10'>
+          <Header />
         </div>
         <div className='container md:py-10'>
           <Routes >      
