@@ -1,18 +1,20 @@
-import React, { useState } from 'react'
-import { useSelector } from 'react-redux'
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import NavItem from './NavItem'
+import { toggleSmallMenu } from '../../store/reducers/menu'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => {
+  const dispatch = useDispatch()
+  const showMenu = useSelector((state) => state.menu.showSmallMenu)
   const isAdmin = useSelector((state) => state.user.isAdmin)
-  const [showMenu, setShowMenu] = useState(false)
 
-  const handleToggle = () => {
-    setShowMenu(prev => !prev)
+  const handleToggle = () => { 
+    dispatch(toggleSmallMenu())
   }
 
   return (

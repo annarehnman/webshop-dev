@@ -1,11 +1,11 @@
-import { configureStore } from "@reduxjs/toolkit"
-import backgroundReducer from "./reducers/background"
-import userReducer from "./reducers/user"
+import { configureStore } from '@reduxjs/toolkit'
+import menuReducer from './reducers/menu'
+import userReducer from './reducers/user'
 import productReducer from './reducers/product'
 
 export default configureStore({
   reducer: {
-    background: backgroundReducer,
+    menu: menuReducer,
     user: userReducer,
     product: productReducer
   }
