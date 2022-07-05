@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import NavItem from './NavItem'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faXmark } from '@fortawesome/free-solid-svg-icons'
 import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = () => {
@@ -43,28 +44,26 @@ const NavBar = () => {
       <NavLink to={'/'}>
         <span className={showMenu ? 'hidden' : 'flex items-center whitespace-nowrap text-2xl'}>Kungsberg Gård</span>
       </NavLink>
-      
       {/* SMALL MENU */}
       <div className='flex justify-end pt-1 md:hidden'>
         <button onClick={handleToggle}>
-          <FontAwesomeIcon className='text-2xl' icon={faBars} />
+          {showMenu 
+            ? <FontAwesomeIcon className='text-3xl' icon={faXmark} /> 
+            : <FontAwesomeIcon className='text-2xl' icon={faBars} />
+          }
         </button>
       </div>
-
-      <div className={showMenu ? 'flex flex-col justify-start' : 'hidden'}>
-        <ul className={showMenu ? 'flex md:hidden flex-col items-start space-y-5 mb-10' : 'hidden'}>
+      <div className={showMenu ? 'flex flex-col items-start mt-5' : 'hidden'}>
+        <ul className='flex md:hidden flex-col items-start space-y-5 mb-10'>
           <NavItem linkItem={home} />
           <NavItem linkItem={products} />
           <NavItem linkItem={contact} />
         </ul>
-        <div className='flex justify-start'>
-          {isAdmin 
-            ? <NavItem linkItem={admin} /> 
-            : <NavItem linkItem={order} />
-          }
-        </div>
+        {isAdmin 
+          ? <NavItem linkItem={admin} /> 
+          : <NavItem linkItem={order} />
+        }
       </div>
-
       {/* LARGE MENU */}
       <div className='hidden md:flex w-full justify-between'>
         <ul className="flex items-center">
