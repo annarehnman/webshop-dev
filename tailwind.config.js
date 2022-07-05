@@ -391,6 +391,7 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      'merriweather': ['"Merriweather"', 'cursive'],
       'shadows': ['"Shadows Into Light"', 'cursive'],
       'opensans': ['"Open Sans"', 'cursive'],
     },
