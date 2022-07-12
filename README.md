@@ -1,6 +1,6 @@
 # WEBSHOP
 
-OBS - Pågående projekt!
+!OBS! - pågående projekt - !OBS!
 
 En responsiv webbapp med produkt- och kontaktsidor, beställningsformulär och admin-sidor.
 
