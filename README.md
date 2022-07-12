@@ -1,4 +1,7 @@
 # WEBSHOP
+
+OBS - Pågående projekt!
+
 En responsiv webbapp med produkt- och kontaktsidor, beställningsformulär och admin-sidor.
 
 Byggd med React + Tailwind + Firebase.
