@@ -16,7 +16,7 @@ export default function Home() {
           <p>Vår gårdsbutik är "öppen nästan jämnt" och vi säljer vårt fina grönbeteskött och ägg både på plats och via vår webbplats. Hör av dig innan du besöker oss bara så vi är hemma.</p>
         </div>
         <div className='flex'>
-          <button className='mx-auto md:ml-0 border border-kbnearblack py-3 px-8 hover:bg-kbdarkgray hover:text-white'>
+          <button className='mx-auto md:ml-0 border border-kbnearblack py-3 px-8 hover:bg-kbdarkgray hover:text-white transition duration-300'>
             <NavLink to={"/butiken"} >TILL BUTIKEN</NavLink>
           </button>
         </div>

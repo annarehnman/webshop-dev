@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import MapContainer from '../components/map/MapContainer'
 
 const Contact = () => {
   return (
@@ -37,8 +38,8 @@ const Contact = () => {
           <p>645 92 Strängnäs</p>
         </div>
       </div>
-      <div className='w-full bg-gray-300 h-96'>
-        karta
+      <div className=''>
+        <MapContainer></MapContainer>
       </div>
     </div>
   )

@@ -35,7 +35,7 @@ export default function App() {
             <Route path="/" exact element={<Home />} />
             <Route path="/butiken" exact element={<Products />} />
             <Route path="/butiken/:id" element={<ProductDetails />} />
-            <Route path="/hittaoss" element={<Contact />} />
+            <Route path="/kontakt" element={<Contact />} />
             <Route path="/bestallning" element={<Order />} />
             <Route path="/admin" element={<Admin />} />
             <Route path='*' element={<NotFound />} />

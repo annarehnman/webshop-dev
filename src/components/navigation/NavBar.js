@@ -35,7 +35,7 @@ const NavBar = () => {
         <ul className='flex flex-col items-start space-y-5 mb-10'>
           <NavItem path={'/'} name={'Start'} />
           <NavItem path={'/butiken'} name={'Butiken'} />
-          <NavItem path={'/hittaoss'} name={'Hitta oss'} />
+          <NavItem path={'/kontakt'} name={'Kontakt'} />
         </ul>
         <div className='flex justify-start'>
           {isAdmin 
@@ -48,7 +48,7 @@ const NavBar = () => {
       <div className='hidden md:flex w-full justify-between'>
         <ul className="flex items-center">
           <NavItem path={'/butiken'} name={'Butiken'} />
-          <NavItem path={'/hittaoss'} name={'Hitta oss'} />
+          <NavItem path={'/kontakt'} name={'Kontakt'} />
         </ul>
         {isAdmin 
             ? <NavItem path={'/admin'} name={'Admin'} />  

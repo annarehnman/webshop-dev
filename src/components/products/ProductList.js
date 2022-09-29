@@ -20,10 +20,10 @@ const ProductList = () => {
               </Link>
               <div className='md:w-full md:mx-1 md:mb-1.5 md:border-kblightgray md:border-b md:border-dashed'></div>
                 <div className='flex md:block w-full md:w-auto justify-between space-x-5 md:space-x-2 text-sm leading-none'>
-                  <button className='w-1/2 md:w-20 bg-kblightgray hover:bg-kbdarkgray text-white text-center py-4 md:ml-1'>
+                  <button className='w-1/2 md:w-20 bg-kblightgray hover:bg-kbdarkgray text-white text-center py-4 md:ml-1 transition duration-300'>
                     <Link to={`/butiken/${p.id}`} product={p.id}>INFO</Link>
                   </button>
-                  <button  className='w-1/2 md:w-20 bg-kblightgray hover:bg-kbdarkgray text-white text-center py-4'>
+                  <button  className='w-1/2 md:w-20 bg-kblightgray hover:bg-kbdarkgray text-white text-center py-4 transition duration-300'>
                     <Link to={`/butiken/${p.id}`} product={p.id}>BESTÄLL</Link>
                   </button>
                 </div>

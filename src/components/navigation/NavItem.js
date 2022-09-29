@@ -16,7 +16,7 @@ const NavItem = props => {
     <li className='flex justify-end md:justify-start font-shadows text-4xl md:text-2xl md:ml-8'>
       <NavLink 
         onClick={handleClick}
-        className={({isActive}) => (isActive ? 'border-b border-white py-1.5' : 'border-b border-transparent hover:border-b hover:border-white py-1.5')}
+        className={({isActive}) => (isActive ? 'border-b border-white py-1.5' : 'border-b border-transparent hover:border-b hover:border-white py-1.5 transition duration-300')}
         to={linkPath}
       >
         {linkName}
