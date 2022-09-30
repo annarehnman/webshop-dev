@@ -1,29 +1,37 @@
-import React, { Component } from 'react';
-import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
+import React from 'react';
+import { GoogleMap, LoadScript } from 'react-google-maps'
 
-const mapStyles = {
-  width: '80%',
-  height: '80%'
-};
+const MapContainer = () => {
+  // const { isLoaded, loadError } = useLoadScript({googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY})
 
-export class MapContainer extends Component {
-  render() {
-    return (
-      <Map
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={
-          {
-            lat: -1.2884,
-            lng: 36.8233
-          }
-        }
-      />
-    );
+  const containerStyle = { 
+    width: '100vw', 
+    height: '100vh'
   }
+  const center = { 
+    lat: 35.6804, 
+    lng: 139.769
+  }
+
+  return (
+    <LoadScript
+    googleMapsApiKey='REACT_APP_GOOGLE_MAPS_API_KEY'
+  >
+    <GoogleMap
+      mapContainerStyle={containerStyle}
+      center={center}
+      zoom={10}
+    >
+      { /* Child components, such as markers, info windows, etc. */ }
+      <></>
+    </GoogleMap>
+  </LoadScript>
+  )
+
+  // if (loadError) return 'Error loading maps'
+  // if (!isLoaded) return (
+  //   <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}></GoogleMap>
+  // )
 }
 
-export default GoogleApiWrapper({
-  apiKey: ''
-})(MapContainer);
+export default MapContainer
