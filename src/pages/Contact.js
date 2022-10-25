@@ -1,12 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookSquare, faInstagram } from '@fortawesome/free-brands-svg-icons'
-import MapContainer from '../components/map/MapContainer'
+import Map from '../components/map/Map'
 
 const Contact = () => {
   return (
     <div className='bg-white md:rounded-lg p-8 md:p-14'>
-      <div className='md:w-2/3 md:pr-20 mb-8 md:mb-12'>
+      <div className='md:w-2/3 md:pr-20 mb-4 md:mb-8'>
         <div className='mb-6'>
           <h1 className='mb-8'>Vi på gården</h1>
           <p>Vi är oftast i trakten och du är välkommen att besöka oss, se till att ringa i förväg bara.</p>
@@ -38,9 +38,7 @@ const Contact = () => {
           <p>645 92 Strängnäs</p>
         </div>
       </div>
-      <div className=''>
-        <MapContainer></MapContainer>
-      </div>
+      <Map></Map>
     </div>
   )
 }
