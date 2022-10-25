@@ -6,11 +6,6 @@ En responsiv webbapp med produkt- och kontaktsidor, beställningsformulär och a
 
 Byggd med React + Tailwind + Firebase.
 
-DEMO HÄR:
-https://nimble-profiterole-a4bb0f.netlify.app/
-
----
-
 ### Project setup
 ```
 npm install
